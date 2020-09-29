@@ -19,4 +19,8 @@
     <ProjectReference Include="..\JuliusTest.SocialMedia.Domain\JuliusTest.SocialMedia.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="QueryResources\" />
+  </ItemGroup>
+
 </Project>
