@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JuliusTest.SocialMedia.Domain\JuliusTest.SocialMedia.Domain.csproj" />
+    <ProjectReference Include="..\JuliusTest.SocialMedia.Infrastructure\JuliusTest.SocialMedia.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
