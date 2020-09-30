@@ -27,24 +27,13 @@ namespace JuliusTest.SocialMedia.Infrastructure.Repositories
         {
         }
 
-        /// <summary>
-        /// Consultars the Publicaciones.
-        /// </summary>
-        /// <returns>Task.</returns>
-        public async Task<List<Publicacion>> ConsultarPublicaciones()
+        public async Task EliminarPublicacion(int idPublicacion)
         {
-            return await _entities.ToListAsync();
-        }
-
-        /// <summary>
-        /// Consultars the Publicaciones por Usuario.
-        /// </summary>
-        /// <param name="idUsuario">id del usuario.</param>
-        /// <returns>Task.</returns>
-
-        public async Task<List<Publicacion>> ConsultarPublicacionesPorUsuario(int idUsuario)
-        {
-            return await _entities.Where(x => x.IdUsuario == idUsuario).ToListAsync();
+            var exist = await _entities.Where(x => x.Id == idPublicacion).FirstOrDefaultAsync();
+            if(exist != null)
+            {
+                _entities.Remove(exist);
+            }
         }
     }
 }

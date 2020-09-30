@@ -54,10 +54,6 @@ namespace JuliusTest.SocialMedia.Infrastructure.DataAccessEntityFrameWork
                 .WithMany(b => b.Publicaciones)
                 .HasForeignKey(p => p.IdUsuario);
 
-            modelBuilder.Entity<Publicacion>()
-                .HasIndex(p => new { p.Titulo, p.Contenido })
-                .HasFilter(null);
-
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
     }

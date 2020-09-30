@@ -12,7 +12,7 @@ namespace JuliusTest.SocialMedia.Infrastructure.Interfaces
     /// </summary>
     /// <seealso cref="JuliusTest.SocialMedia.Infrastructure.Interfaces.IReadRepository{JuliusTest.SocialMedia.Domain.Entities.Usuario}" />
     /// <seealso cref="JuliusTest.SocialMedia.Infrastructure.Interfaces.ICreateRepository{JuliusTest.SocialMedia.Domain.Entities.Usuario}" />
-    public interface IUsuarioRepository : IReadRepository<Usuario>, ICreateRepository<Usuario>, IPagedRepository<Usuario>
+    public interface IUsuarioRepository : IReadRepository<Usuario>, ICreateRepository<Usuario>
     {
 
         /// <summary>
@@ -21,5 +21,19 @@ namespace JuliusTest.SocialMedia.Infrastructure.Interfaces
         /// <param name="usuario">The usuario.</param>
         /// <returns>Task&lt;Usuario&gt;.</returns>
         Task<Usuario> ValidarUsuario(SeguridadDto usuario);
+
+        /// <summary>
+        /// Gets the Existe Email.
+        /// </summary>
+        /// <param name="email">The Email.</param>
+        /// <returns>Task&lt;bool&gt;.</returns>
+        Task<bool> ExisteEmail(string email);
+
+        /// <summary>
+        /// Gets the Existe Usuario.
+        /// </summary>
+        /// <param name="usuario">The Usuario.</param>
+        /// <returns>Task&lt;bool&gt;.</returns>
+        Task<bool> ExisteUsuario(string usuario);
     }
 }

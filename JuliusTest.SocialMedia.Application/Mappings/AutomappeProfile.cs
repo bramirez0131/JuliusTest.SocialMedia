@@ -20,6 +20,9 @@ namespace JuliusTest.SocialMedia.Application.Mappings
 			CreateMap<Usuario, UsuarioCrearDto>();
 			CreateMap<UsuarioCrearDto, Usuario>()
 			   .ForMember(s => s.Id, o => o.Ignore());
+			CreateMap<Publicacion, PublicacionCrearDto>();
+			CreateMap<PublicacionCrearDto, Publicacion>()
+			   .ForMember(s => s.Id, o => o.Ignore());
 		}
 	}
 }

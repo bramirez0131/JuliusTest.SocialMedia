@@ -20,7 +20,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="QueryResources\" />
+    <Compile Update="QueryResources\PublicacionSentencias.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PublicacionSentencias.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="QueryResources\PublicacionSentencias.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PublicacionSentencias.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

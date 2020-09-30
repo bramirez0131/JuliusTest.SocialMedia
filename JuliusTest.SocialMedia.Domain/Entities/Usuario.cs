@@ -1,6 +1,4 @@
-﻿using JuliusTest.SocialMedia.Domain.Enumerations;
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace JuliusTest.SocialMedia.Domain.Entities
 {
@@ -28,13 +26,6 @@ namespace JuliusTest.SocialMedia.Domain.Entities
         /// </summary>
         /// <value>The password.</value>
         public string Email { get; set; }
-
-        /// <summary>
-        /// Gets or sets the role.
-        /// </summary>
-        /// <value>The role.</value>
-        public RoleType Rol { get; set; }
-
 
         public List<Publicacion> Publicaciones { get; set; }
     }
