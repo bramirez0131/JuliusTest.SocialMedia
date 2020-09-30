@@ -4,5 +4,108 @@
         <name>JuliusTest.SocialMedia.Api</name>
     </assembly>
     <members>
+        <member name="T:JuliusTest.SocialMedia.Api.Filters.GlobalExceptionFilter">
+            <summary>
+            Class GlobalExceptionFilter.
+            Implements the <see cref="T:Microsoft.AspNetCore.Mvc.Filters.IExceptionFilter" />
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.Filters.IExceptionFilter" />
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Filters.GlobalExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            Called after an action has thrown an <see cref="T:System.Exception" />.
+            </summary>
+            <param name="context">The <see cref="T:Microsoft.AspNetCore.Mvc.Filters.ExceptionContext" />.</param>
+        </member>
+        <member name="T:JuliusTest.SocialMedia.Api.Filters.ValidatorActionFilter">
+            <summary>
+            Class ValidatorActionFilter.
+            Implements the <see cref="T:Microsoft.AspNetCore.Mvc.Filters.IActionFilter" />
+            Implements the <see cref="T:Microsoft.AspNetCore.Mvc.Filters.IAsyncActionFilter" />
+            Implements the <see cref="T:Microsoft.AspNetCore.Mvc.Filters.IActionFilter" />
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.Filters.IActionFilter" />
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.Filters.IAsyncActionFilter" />
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.Filters.IActionFilter" />
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Filters.ValidatorActionFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Called before the action executes, after model binding is complete.
+            </summary>
+            <param name="context">The <see cref="T:Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext" />.</param>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Filters.ValidatorActionFilter.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Called after the action executes, before the action result.
+            </summary>
+            <param name="context">The <see cref="T:Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext" />.</param>
+        </member>
+        <member name="T:JuliusTest.SocialMedia.Api.Response.ApiResponse`1">
+            <summary>
+            Class ApiResponse.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Response.ApiResponse`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:JuliusTest.SocialMedia.Api.Response.ApiResponse`1"/> class.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="P:JuliusTest.SocialMedia.Api.Response.ApiResponse`1.Data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value>The data.</value>
+        </member>
+        <member name="P:JuliusTest.SocialMedia.Api.Response.ApiResponse`1.Meta">
+            <summary>
+            Gets or sets the meta.
+            </summary>
+            <value>The meta.</value>
+        </member>
+        <member name="T:JuliusTest.SocialMedia.Api.Startup">
+            <summary>
+            Class Startup.
+            </summary>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:JuliusTest.SocialMedia.Api.Startup"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+        </member>
+        <member name="P:JuliusTest.SocialMedia.Api.Startup.Configuration">
+            <summary>
+            Gets the configuration.
+            </summary>
+            <value>The configuration.</value>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures the services.
+            </summary>
+            <param name="services">The services.</param>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Configures the specified application.
+            </summary>
+            <param name="app">The application.</param>
+            <param name="env">The env.</param>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Startup.AddApplicationService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds the application service.
+            </summary>
+            <param name="services">The services.</param>
+            <returns>IServiceCollection.</returns>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Startup.AddAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds the authentication.
+            </summary>
+            <param name="services">The services.</param>
+        </member>
     </members>
 </doc>
