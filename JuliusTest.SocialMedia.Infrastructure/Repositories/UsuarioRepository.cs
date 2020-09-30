@@ -5,6 +5,7 @@ using JuliusTest.SocialMedia.Infrastructure.Interfaces;
 
 using Microsoft.EntityFrameworkCore;
 
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace JuliusTest.SocialMedia.Infrastructure.Repositories
@@ -27,9 +28,29 @@ namespace JuliusTest.SocialMedia.Infrastructure.Repositories
         {
         }
 
+        public async Task<bool> ExisteEmail(string email)
+        {
+            var result = await _entities.Where(x => x.Email == email).FirstOrDefaultAsync();
+            if (result != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public async Task<bool> ExisteUsuario(string usuario)
+        {
+            var result = await _entities.Where(x => x.NombreUsuario == usuario).FirstOrDefaultAsync();
+            if(result != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public async Task<Usuario> ValidarUsuario(SeguridadDto usuario)
         {
-            return await _entities.FirstOrDefaultAsync(x => x.NombreUsuario == usuario.Usuario && x.Contrasena == usuario.Contrasena);
+            return await _entities.FirstOrDefaultAsync(x => x.NombreUsuario == usuario.Usuario);
         }
     }
 }

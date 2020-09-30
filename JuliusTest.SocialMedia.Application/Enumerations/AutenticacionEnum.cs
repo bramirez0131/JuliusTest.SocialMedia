@@ -32,9 +32,9 @@ namespace JuliusTest.SocialMedia.Application.Enumerations
 		private static readonly AutenticacionEnum _minutosToken = new AutenticacionEnum(3, "Authentication:MinutosToken");
 
 		/// <summary>
-		/// The usuario
+		/// The idUsuario
 		/// </summary>
-		private static readonly AutenticacionEnum _usuario = new AutenticacionEnum(4, "User");
+		private static readonly AutenticacionEnum _idUsuario = new AutenticacionEnum(4, "IdUsuario");
 
 		/// <summary>
 		/// Gets the editor.
@@ -64,7 +64,7 @@ namespace JuliusTest.SocialMedia.Application.Enumerations
 		/// Gets the usuario.
 		/// </summary>
 		/// <value>The usuario.</value>
-		public static AutenticacionEnum Usuario { get => _usuario; }
+		public static AutenticacionEnum IdUsuario { get => _idUsuario; }
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="AutenticacionEnum" /> class.

@@ -4,6 +4,122 @@
         <name>JuliusTest.SocialMedia.Api</name>
     </assembly>
     <members>
+        <member name="T:JuliusTest.SocialMedia.Api.Controllers.PublicacionController">
+            <summary>
+            Class PublicacionController.
+            Implements the <see cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+        </member>
+        <member name="F:JuliusTest.SocialMedia.Api.Controllers.PublicacionController.service">
+            <summary>
+            The service
+            </summary>
+        </member>
+        <member name="F:JuliusTest.SocialMedia.Api.Controllers.PublicacionController._mapper">
+            <summary>
+            The mapper
+            </summary>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Controllers.PublicacionController.#ctor(JuliusTest.SocialMedia.Application.Abstract.IPublicacionService,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:JuliusTest.SocialMedia.Api.Controllers.PublicacionController"/> class.
+            </summary>
+            <param name="service">The service.</param>
+            <param name="mapper">The mapper.</param> 
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Controllers.PublicacionController.CrearPublicacion(JuliusTest.SocialMedia.Application.DTO.PublicacionCrearDto)">
+            <summary>
+            Crear Publicacion.
+            </summary>
+            <param name="publicacion">The publicacion.</param>
+            <returns>Task&lt;IActionResult&gt;.</returns>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Controllers.PublicacionController.ConsultaGeneral(JuliusTest.SocialMedia.Application.DTO.PublicacionGeneralDto)">
+            <summary>
+            Consultas Publicaciones.
+            </summary>
+            <param name="publicacionGeneralDto">The dto.</param>
+            <returns>Task&lt;IActionResult&gt;.</returns>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Controllers.PublicacionController.ConsultaUsuario(JuliusTest.SocialMedia.Application.DTO.PublicacionUsuarioDto)">
+            <summary>
+            Consultas Publicaciones Usuario.
+            </summary>
+            <param name="publicacionUsuarioDto">The dto.</param>
+            <returns>Task&lt;IActionResult&gt;.</returns>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Controllers.PublicacionController.ConsultaBusqueda(JuliusTest.SocialMedia.Application.DTO.PublicacionBusquedaDto)">
+            <summary>
+            Consultas Busqueda Publicaciones.
+            </summary>
+            <param name="publicacionBusquedaDto">The dto.</param>
+            <returns>Task&lt;IActionResult&gt;.</returns>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Controllers.PublicacionController.EliminarPublicacion(JuliusTest.SocialMedia.Application.DTO.PublicacionEliminarDto)">
+            <summary>
+            Eliminar Publicacion.
+            </summary>
+            <param name="publicacion">The publicacion.</param>
+            <returns>Task&lt;IActionResult&gt;.</returns>
+        </member>
+        <member name="T:JuliusTest.SocialMedia.Api.Controllers.UsuarioController">
+            <summary>
+            Class UsuarioController.
+            Implements the <see cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+        </member>
+        <member name="F:JuliusTest.SocialMedia.Api.Controllers.UsuarioController._usuarioService">
+            <summary>
+            The usuario service
+            </summary>
+        </member>
+        <member name="F:JuliusTest.SocialMedia.Api.Controllers.UsuarioController._contrasenaService">
+            <summary>
+            The contrasena service
+            </summary>
+        </member>
+        <member name="F:JuliusTest.SocialMedia.Api.Controllers.UsuarioController._configuracion">
+            <summary>
+            The configuracion
+            </summary>
+        </member>
+        <member name="F:JuliusTest.SocialMedia.Api.Controllers.UsuarioController._mapper">
+            <summary>
+            The mapper
+            </summary>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Controllers.UsuarioController.#ctor(JuliusTest.SocialMedia.Application.Abstract.IUsuarioService,JuliusTest.SocialMedia.Application.Abstract.IContrasenaService,Microsoft.Extensions.Configuration.IConfiguration,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:JuliusTest.SocialMedia.Api.Controllers.UsuarioController" /> class.
+            </summary>
+            <param name="usuarioService">The usuario service.</param>
+            <param name="contrasenaService">The contrasena service.</param> 
+            <param name="configuracion">The configuracion.</param>
+            <param name="mapper">The mapper.</param> 
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Controllers.UsuarioController.Crear(JuliusTest.SocialMedia.Application.DTO.UsuarioCrearDto)">
+            <summary>
+            crear usuario.
+            </summary>
+            <param name="usuario">The usuario.</param>
+            <returns>Task&lt;IActionResult&gt;.</returns>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Controllers.UsuarioController.Autenticar(JuliusTest.SocialMedia.Domain.DTO.SeguridadDto)">
+            <summary>
+            Authentications the specified login.
+            </summary>
+            <param name="login">The login.</param>
+            <returns>Task&lt;IActionResult&gt;.</returns>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Controllers.UsuarioController.GenerarToken(JuliusTest.SocialMedia.Domain.Entities.Usuario)">
+            <summary>
+            Generates the token.
+            </summary>
+            <param name="usuario">The usuario.</param>
+            <returns>System.String.</returns>
+        </member>
         <member name="T:JuliusTest.SocialMedia.Api.Filters.GlobalExceptionFilter">
             <summary>
             Class GlobalExceptionFilter.
@@ -39,6 +155,24 @@
             Called after the action executes, before the action result.
             </summary>
             <param name="context">The <see cref="T:Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext" />.</param>
+        </member>
+        <member name="T:JuliusTest.SocialMedia.Api.Program">
+            <summary>
+            Class Program.
+            </summary>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Program.Main(System.String[])">
+            <summary>
+            Defines the entry point of the application.
+            </summary>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Creates the host builder.
+            </summary>
+            <param name="args">The arguments.</param>
+            <returns>IHostBuilder.</returns>
         </member>
         <member name="T:JuliusTest.SocialMedia.Api.Response.ApiResponse`1">
             <summary>
@@ -106,6 +240,89 @@
             Adds the authentication.
             </summary>
             <param name="services">The services.</param>
+        </member>
+        <member name="T:JuliusTest.SocialMedia.Api.Validators.PublicacionBusquedaValidator">
+            <summary>
+            Class PublicacionBusquedaValidator.
+            Implements the  />
+            </summary>
+            <seealso  />
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Validators.PublicacionBusquedaValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:JuliusTest.SocialMedia.Api.Validators.PublicacionBusquedaValidator" /> class.
+            </summary>
+        </member>
+        <member name="T:JuliusTest.SocialMedia.Api.Validators.PublicacionCrearValidator">
+            <summary>
+            Class PublicacionCrearValidator.
+            Implements the  />
+            </summary>
+            <seealso  />
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Validators.PublicacionCrearValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:JuliusTest.SocialMedia.Api.Validators.UsuarioCrearValidator" /> class.
+            </summary>
+        </member>
+        <member name="T:JuliusTest.SocialMedia.Api.Validators.PublicacionEliminarValidator">
+            <summary>
+            Class PublicacionEliminarValidator.
+            Implements the  />
+            </summary>
+            <seealso  />
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Validators.PublicacionEliminarValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:JuliusTest.SocialMedia.Api.Validators.PublicacionEliminarValidator" /> class.
+            </summary>
+        </member>
+        <member name="T:JuliusTest.SocialMedia.Api.Validators.PublicacionGeneralValidator">
+            <summary>
+            Class PublicacionEliminarValidator.
+            Implements the  />
+            </summary>
+            <seealso  />
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Validators.PublicacionGeneralValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:JuliusTest.SocialMedia.Api.Validators.PublicacionGeneralValidator" /> class.
+            </summary>
+        </member>
+        <member name="T:JuliusTest.SocialMedia.Api.Validators.PublicacionUsuarioValidator">
+            <summary>
+            Class UsuarioCrearValidator.
+            Implements the  />
+            </summary>
+            <seealso  />
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Validators.PublicacionUsuarioValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:JuliusTest.SocialMedia.Api.Validators.UsuarioCrearValidator" /> class.
+            </summary>
+        </member>
+        <member name="T:JuliusTest.SocialMedia.Api.Validators.UsuarioCrearValidator">
+            <summary>
+            Class UsuarioCrearValidator.
+            Implements the  />
+            </summary>
+            <seealso  />
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Validators.UsuarioCrearValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:JuliusTest.SocialMedia.Api.Validators.UsuarioCrearValidator" /> class.
+            </summary>
+        </member>
+        <member name="T:JuliusTest.SocialMedia.Api.Validators.UsuarioValidator">
+            <summary>
+            Class SeguridadValidator.
+            </summary>
+            <seealso  />
+        </member>
+        <member name="M:JuliusTest.SocialMedia.Api.Validators.UsuarioValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:JuliusTest.SocialMedia.Api.Validators.UsuarioValidator" /> class.
+            </summary>
         </member>
     </members>
 </doc>

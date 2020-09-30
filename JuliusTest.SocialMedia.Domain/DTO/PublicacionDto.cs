@@ -1,4 +1,6 @@
-﻿namespace JuliusTest.SocialMedia.Domain.DTO
+﻿using System;
+
+namespace JuliusTest.SocialMedia.Domain.DTO
 {
     public class PublicacionDto
     {
@@ -36,6 +38,18 @@
         /// Gets or sets the FechaCreacion.
         /// </summary>
         /// <value>The FechaCreacion.</value>
-        public string FechaCreacion { get; set; }
+        public DateTime FechaCreacion { get; set; }
+
+        /// <summary>
+        /// Gets or sets the total registros.
+        /// </summary>
+        /// <value>The total registros.</value>
+        public int TotalRegistros { get; set; }
+
+        /// <summary>
+        /// Gets or sets the registros filtrados.
+        /// </summary>
+        /// <value>The registros filtrados.</value>
+        public int RegistrosFiltrados { get; set; }
     }
 }

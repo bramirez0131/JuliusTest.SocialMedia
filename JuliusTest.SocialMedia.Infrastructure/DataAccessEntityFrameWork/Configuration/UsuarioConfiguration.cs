@@ -2,8 +2,6 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 using JuliusTest.SocialMedia.Domain.Entities;
-using JuliusTest.SocialMedia.Domain.Enumerations;
-using System;
 
 namespace JuliusTest.SocialMedia.Infrastructure.DataAccessEntityFrameWork.Configuration
 {
@@ -44,14 +42,6 @@ namespace JuliusTest.SocialMedia.Infrastructure.DataAccessEntityFrameWork.Config
 				.IsRequired()
 				.HasMaxLength(200)
 				.IsUnicode(true);
-
-			builder.Property(e => e.Rol)
-			   .HasMaxLength(15)
-			   .IsRequired()
-			   .HasConversion(
-					x => x.ToString(),
-					x => (RoleType)Enum.Parse(typeof(RoleType), x)
-				);
 
 		}
     }

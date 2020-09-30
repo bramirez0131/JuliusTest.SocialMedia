@@ -7,25 +7,20 @@ namespace JuliusTest.SocialMedia.Infrastructure.Interfaces
 {
     /// <summary>
     /// Interface IPublicacionRepository
-    /// Implements the <see cref="JuliusTest.SocialMedia.Infrastructure.Interfaces.IReadRepository{JuliusTest.SocialMedia.Domain.Entities.Usuario}" />
-    /// Implements the <see cref="JuliusTest.SocialMedia.Infrastructure.Interfaces.ICreateRepository{JuliusTest.SocialMedia.Domain.Entities.Usuario}" />
+    /// Implements the <see cref="JuliusTest.SocialMedia.Infrastructure.Interfaces.IReadRepository{JuliusTest.SocialMedia.Domain.Entities.Publicacion}" />
+    /// Implements the <see cref="JuliusTest.SocialMedia.Infrastructure.Interfaces.ICreateRepository{JuliusTest.SocialMedia.Domain.Entities.Publicacion}" />
+    /// Implements the <see cref="JuliusTest.SocialMedia.Infrastructure.Interfaces.IRemoveRepository{JuliusTest.SocialMedia.Domain.Entities.Publicacion}" />
     /// </summary>
-    /// <seealso cref="JuliusTest.SocialMedia.Infrastructure.Interfaces.IReadRepository{JuliusTest.SocialMedia.Domain.Entities.Usuario}" />
-    /// <seealso cref="JuliusTest.SocialMedia.Infrastructure.Interfaces.ICreateRepository{JuliusTest.SocialMedia.Domain.Entities.Usuario}" />
-    public interface IPublicacionRepository : IReadRepository<Publicacion>, ICreateRepository<Publicacion>, IPagedRepository<Publicacion>
+    /// <seealso cref="JuliusTest.SocialMedia.Infrastructure.Interfaces.IReadRepository{JuliusTest.SocialMedia.Domain.Entities.Publicacion}" />
+    /// <seealso cref="JuliusTest.SocialMedia.Infrastructure.Interfaces.ICreateRepository{JuliusTest.SocialMedia.Domain.Entities.Publicacion}" />
+    /// <seealso cref="JuliusTest.SocialMedia.Infrastructure.Interfaces.IDapperRepository{JuliusTest.SocialMedia.Domain.Entities.Publicacion}" /> 
+    public interface IPublicacionRepository : IReadRepository<Publicacion>, ICreateRepository<Publicacion>, IRemoveRepository<Publicacion>
     {
-
         /// <summary>
-        /// Consultars the Publicaciones.
+        /// Gets the Eliminar Publicacion.
         /// </summary>
-        /// <returns>Task.</returns>
-        Task<List<Publicacion>> ConsultarPublicaciones();
-
-        /// <summary>
-        /// Consultars the Publicaciones por Usuario.
-        /// </summary>
-        /// <param name="idUsuario">id del usuario.</param>
-        /// <returns>Task.</returns>
-        Task<List<Publicacion>> ConsultarPublicacionesPorUsuario(int idUsuario);
+        /// <param name="email">The Email.</param>
+        /// <returns>Task&lt;bool&gt;.</returns>
+        Task EliminarPublicacion(int idPublicacion);
     }
 }
