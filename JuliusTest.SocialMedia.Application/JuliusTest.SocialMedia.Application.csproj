@@ -9,4 +9,8 @@
     <ProjectReference Include="..\JuliusTest.SocialMedia.Infrastructure\JuliusTest.SocialMedia.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+
 </Project>
